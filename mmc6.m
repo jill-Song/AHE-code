@@ -1,10 +1,4 @@
 %% Function to generate Generalized Periodic Discharges in Acute Hepatic Encephalopathy(AHE)
-% Reference: code Ruijter2017_model
-% Ruijter, Barry Johannes, et al. 
-% "Synaptic damage underlies EEG abnormalities in postanoxic encephalopathy: A computational study." 
-% Clinical neurophysiology 128.9 (2017): 1682-1695.
-
-
 % This code is about a new computational modl of acute hepatic encephalopathy. 
 % It is constructed to study the Generalized Periodic Discharges in Acute Hepatic Encephalopathy(AHE)
 % the inpus are four paramters in equations corresponding to three AHE mechanisms 
@@ -15,7 +9,11 @@
 %           propofol:   control parameter relating to the decay time of the IPSP
 %
 % Ouputs:  simulated EEG signal
-%
+% Reference: code Ruijter2017_model
+% Ruijter, Barry Johannes, et al. 
+% "Synaptic damage underlies EEG abnormalities in postanoxic encephalopathy: A computational study." 
+% Clinical neurophysiology 128.9 (2017): 1682-1695.
+
 %%
 function EEG=mmc6(parset_tau_rec_e,parset_tau_rec_i,parset_ltp_factor,parset_propofol)
 
@@ -27,9 +25,9 @@ function EEG=mmc6(parset_tau_rec_e,parset_tau_rec_i,parset_ltp_factor,parset_pro
 
   
     % 0. General settings
-    sim_time=60;            % simulation time (sec)
+    sim_time=60;           % simulation time (sec)
     steps=8960;            % simulation steps per second / 'sample frequency' (Hz)
-    white_noise=1;          % 0= no noise input, % 1= white noise input
+    white_noise=1;         % 0= no noise input, % 1= white noise input
 
     % 1. Define model parameters
 	
